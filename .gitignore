@@ -1,0 +1,17 @@
+.idea
+venv
+db.sqlite3
+.env
+test.py
+__pycache__/
+*.pyc
+*.log
+debug.log
+create_admin.py
+create_test_lead.py
+create_db.py
+verify_cron.py
+asc.json
+desc.json
+verify_active.py
+verify_sorting.py

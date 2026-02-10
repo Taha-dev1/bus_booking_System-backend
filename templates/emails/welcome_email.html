@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to David Transportation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            color: #2c5282;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .credentials-box {
+            background-color: #f7fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .credential-item {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .credential-label {
+            font-weight: bold;
+            color: #2d3748;
+        }
+        .login-button {
+            display: inline-block;
+            background-color: #3182ce;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .trip-details {
+            background-color: #edf2f7;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .trip-details h3 {
+            color: #2d3748;
+            margin-top: 0;
+        }
+        .detail-item {
+            margin: 8px 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            color: #718096;
+        }
+        .warning {
+            background-color: #fed7d7;
+            border: 1px solid #feb2b2;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 20px 0;
+            color: #742a2a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome to David Transportation!</h1>
+            <h2>Hello {{ user.first_name }}!</h2>
+        </div>
+
+        <p>Thank you for choosing David Transportation. Your account has been created successfully and your transportation request has been submitted.</p>
+
+        <div class="credentials-box">
+            <h3 style="margin-top: 0; color: #2d3748;">Your Login Credentials</h3>
+            <div class="credential-item">
+                <span class="credential-label">Email:</span> {{ user.email }}
+            </div>
+            <div class="credential-item">
+                <span class="credential-label">Password:</span> {{ password }}
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="{{ login_url }}" class="login-button">Login to Dashboard</a>
+            </div>
+        </div>
+
+        <!-- <div class="warning">
+            <strong>Important Security Note:</strong><br>
+            Please change your password immediately after your first login for security reasons.
+        </div> -->
+
+        <div class="trip-details">
+            <h3>Your Transportation Request Details</h3>
+            <div class="detail-item">
+                <strong>Pickup Location:</strong> {{ lead.pickup_location }}
+            </div>
+            <div class="detail-item">
+                <strong>Drop-off Location:</strong> {{ lead.dropoff_location }}
+            </div>
+            <div class="detail-item">
+                <strong>Travel Date:</strong> {{ lead.travel_date }}
+            </div>
+            <div class="detail-item">
+                <strong>Pickup Time:</strong> {{ lead.pickup_time }}
+            </div>
+            <div class="detail-item">
+                <strong>Number of Passengers:</strong> {{ lead.number_of_passengers }}
+            </div>
+            <div class="detail-item">
+                <strong>Vehicle Type:</strong> {{ lead.vehicle_type }}
+            </div>
+            {% if lead.is_roundtrip %}
+            <div class="detail-item">
+                <strong>Return Date:</strong> {{ lead.roundtrip_pickup_date }}
+            </div>
+            <div class="detail-item">
+                <strong>Return Time:</strong> {{ lead.roundtrip_pickup_time }}
+            </div>
+            {% endif %}
+            {% if lead.institute_name %}
+            <div class="detail-item">
+                <strong>Institute:</strong> {{ lead.institute_name }}
+            </div>
+            {% endif %}
+            {% if lead.special_instructions %}
+            <div class="detail-item">
+                <strong>Special Instructions:</strong> {{ lead.special_instructions }}
+            </div>
+            {% endif %}
+        </div>
+
+        <p>You can log into your dashboard to:</p>
+        <ul>
+            <li>View your booking status</li>
+            <li>Track your requests</li>
+            <li>Update your profile</li>
+            <li>View payment information</li>
+        </ul>
+
+        <p>Our team will review your request and contact you soon with confirmation and further details.</p>
+
+        <div class="footer">
+            <p>Best regards,<br>
+            <strong>David Transportation Team</strong></p>
+            <p style="font-size: 12px; margin-top: 20px;">
+                This is an automated email. Please do not reply to this message.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

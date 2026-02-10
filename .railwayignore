@@ -1,0 +1,63 @@
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+.venv
+.env
+
+# Database
+db.sqlite3
+*.db
+*.sqlite
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Logs
+*.log
+logs/
+debug.log
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Node modules (if any)
+node_modules/
+
+# Static files (will be collected during build)
+staticfiles/
+static/
+
+# Media files (if large)
+media/
+
+# Test files
+tests/
+test_*.py
+*_test.py
+
+# Documentation
+docs/
+README.md
+*.md
+
+# Environment files (should use Railway variables instead)
+.env
+.env.local
+.env.production

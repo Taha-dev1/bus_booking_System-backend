@@ -1,0 +1,34 @@
+{
+    "school_name": "gcs",
+    "email": "belari2805@icubik.com",
+    "teacher_incharge": "rty",
+    "phone_number": "1234567890",
+    "special_instructions": "noting",
+    "teachers_count": 2,
+    "students_count": 7,
+    "outbound_trip": {
+        "type": "OUTBOUND",
+        "pickup_location": "VGUARD International Limited, Virginia, Cavan, Ireland",
+        "dropoff_location": "VNC Tattoo, South Terrace, Ballintemple, Cork, Ireland",
+        "pickup_date": "2026-02-19",
+        "pickup_time": "02:00",
+        "arrival_time": "12:31",
+        "arrival_date": "2026-02-19",
+        "duration": "10:31 hrs",
+        "distance": 686,
+        "trip_stops": [
+            {
+                "estimated_time": 23,
+                "location": "TBB Fitness Coonagh, Ennis Road, Clondrinagh, Limerick, Ireland",
+                "stop_order": 1
+            },
+            {
+                "estimated_time": 25,
+                "location": "The Square Tallaght, Belgard Square East, Tallaght, Dublin, Ireland",
+                "stop_order": 2
+            }
+        ]
+    },
+    "privacy_agreed": false,
+    "submitted_at": "2026-02-04T09:51:54.488Z"
+}

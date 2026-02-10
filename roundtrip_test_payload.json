@@ -1,0 +1,39 @@
+{
+    "school_name": "Roundtrip Academy",
+    "email": "roundtrip_test@school.com",
+    "teacher_incharge": "Alice Roundtrip",
+    "phone_number": "0871234567",
+    "special_instructions": "Roundtrip test",
+    "teachers_count": 2,
+    "students_count": 20,
+    "outbound_trip": {
+        "type": "OUTBOUND",
+        "pickup_location": "School, Dublin",
+        "dropoff_location": "Museum, Cork",
+        "pickup_date": "2026-03-01",
+        "pickup_time": "09:00",
+        "arrival_time": "12:00",
+        "duration": "3:00 hrs",
+        "distance": 260,
+        "trip_stops": [
+            {
+                "estimated_time": 15,
+                "location": "Rest Stop, Kildare",
+                "stop_order": 1
+            }
+        ]
+    },
+    "return_trip": {
+        "type": "RETURN",
+        "pickup_location": "Museum, Cork",
+        "dropoff_location": "School, Dublin",
+        "pickup_date": "2026-03-01",
+        "pickup_time": "16:00",
+        "arrival_time": "19:00",
+        "duration": "3:00 hrs",
+        "distance": 260,
+        "trip_stops": []
+    },
+    "privacy_agreed": true,
+    "submitted_at": "2026-02-05T10:00:00.000Z"
+}
